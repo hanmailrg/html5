@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* 기본적인 폰트 설정하기 */
+* {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+
+/* 여백 설정 */
+body {
+	margin: 0;
+	padding: 0;
+	border: solid 0px red;
+	word-break: break-all; /* 공백없이 영어로만 되어질 경우 해당구역을 빠져나가므로 이것을 막기위해서 사용한다. */
+}
+
+div#container {
+	border: solid 0px gray;
+	width: 70%;
+	margin: 0 auto;
+}
+
+div#header_menu{
+ /* border: solid 1px navy; */
+	
+	display: flex;
+	height: 60px;
+	border-bottom: solid 3px navy;
+    padding-bottom: 1%;	 
+}
+
+div#header_menu > div:first-child {
+	border: solid 0px green;
+	width: 70%;
+}
+
+div#header_menu > div:first-child > ul,
+div#contents > div#sidebar > div#sidebar_contents > ul,
+div#footer > ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+div#header_menu > div:first-child > ul > li,
+div#footer > ul > li {
+	display: inline-block;
+	border: solid 0px red;
+	width: 16%;
+	margin-right: 2%;
+}
+
+div#header_menu > div:first-child > ul > li {
+	font-size: 14pt;
+}
+
+div#header_menu > div:last-child {
+	border: solid 0px red;
+	margin-left: auto;
+	/* flex item 들을 모두 생성한 이후 flex 의 width 에 여백이 생길 경우, 
+	   맨 마지막 flex item 의 위치를 flex 상의 끝으로 이동시키고자 할 경우 
+	   맨 마지막 flex item 의 margin-left: auto; 라고 해주면 왼쪽 바깥여백 크기는 flex 의 width 에 남은 여백크기로 해준다.
+	   그래서 맨 마지막 flex item 은 flex 상에서 맨 끝으로 이동하게 된다. 
+	*/
+	
+	display: flex;
+	/* 
+	 >>>> !!! div 에 세로 정렬을 시키려면 !!! <<<<
+		div 의 display 를 flex 로 하고, flex item 에서 margin: auto; 로 지정해주면 정중앙에 오게 된다.
+		div 의 display 를 flex 로 하고, flex item 에서 margin: auto 0; 로 지정해주면 세로기준의 가운데에 오게 된다.
+    */
+}
+
+div#header_menu > div:last-child > form {
+	margin: auto 0;
+	/* 
+	 >>>> !!! div 에 세로 정렬을 시키려면 !!! <<<<
+		div 의 display 를 flex 로 하고, flex item 에서 margin: auto; 로 지정해주면 정중앙에 오게 된다.
+		div 의 display 를 flex 로 하고, flex item 에서 margin: auto 0; 로 지정해주면 세로기준의 가운데에 오게 된다.
+    */
+}
+
+div#header_menu > div:last-child > form > * {
+	height: 30px;
+}
+
+div#header_menu > div:last-child > form > button {
+	width: 60px;
+	font-size: 12pt;
+	margin-left: 20px;
+	
+	position: relative;
+	top: 1px;
+}
+
+div#header_menu > div:last-child > form > button:hover {
+	cursor: pointer;
+}
+
+
+/*  a 태그의 밑줄 제거하기  */
+a {
+	text-decoration: none;
+}
+
+/* a 태그에 방문하기전의 링크 */
+a:link {
+	color: blue;
+}
+
+/* a 태그에 방문후의 링크 */
+a:visited {
+	color: blue;
+}
+
+/* a 태그에 마우스 포인터를 올려 놓았을 때 */
+div#header_menu  a:hover {
+	background-color: red;
+	color: yellow;
+	font-weight: bolder;
+}
+
+
+div#contents {
+	display: flex;
+	min-height: 300px;
+	/*  div#contents 안에 들어오는 요소(element)들을 flex item 이라고 부른다. 
+	    flex item 의 height 크기는 모두 여기에 설정해둔 height 350px; 을 가지게 된다.
+	    또한 flex item 들의 display 는 모두 inline-block; 처럼 되어진다. 
+	*/
+	padding-top: 5%;
+}
+
+div#contents > div#section {
+	border: solid 1px gray;
+	border-radius: 1%;
+	max-height: 500px;
+	overflow: auto;
+	width: 75%;
+}
+
+div#contents > div#section > p {
+	line-height: 150%;
+}
+
+div#contents > div#section > div#sub_section {
+	border: solid 0px red;
+	display: flex;
+}
+
+div#contents > div#section > div#sub_section > p:nth-child(1) {
+    border: solid 0px red;	
+    width: 60%;
+    line-height: 150%;
+}
+
+div#contents > div#section > div#sub_section > p:nth-child(2) {
+    border: solid 0px green;
+    width: 35%;
+    margin: 0 0 0 auto;	
+    
+    font-size: 20px;
+	font-weight: bold;
+	color: #b30059;
+	line-height: 200%; /* 줄간격 */
+}
+
+p {
+	margin-bottom: 2.5%;
+}
+
+div#contents > div#sidebar {
+	border: solid 1px gray;
+	border-radius: 3%;
+	width: 20%;
+	margin-left: auto;
+}
+
+div#contents > div#sidebar > div#sidebar_contents {
+	border: solid 0px red;
+	position: relative;
+	left: 26%;
+}
+
+div#contents > div#sidebar > div#sidebar_contents > ul > li {
+	line-height: 200%;
+}
+
+div#contents > div#sidebar > div#sidebar_contents > ul > li:nth-child(5) > ul > li {
+	border: solid 0px green;
+	line-height: 150%;
+} 
+
+
+div#footer {
+	border: solid 0px orange;
+	text-align: center;
+	padding: 5% 0 4% 0; /* 상 우 하 좌 */
+}
+
+

@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Arial, "MS Trebuchet", sans-serif;
+		word-break: break-all;  /* 공백없이 영어로만 되어질 경우 해당구역을 빠져나가므로 이것을 막기위해서 사용한다. */
+	}
+	
+	div#container {
+	 	border: solid 0px gray; 
+		
+		width: 80%;
+		margin: 3% auto;
+		
+	}
+	
+	div#container > div#header {
+		border: solid 0px gray;
+		display: flex;
+	}
+	
+	div#container > div#header > div:nth-child(1) {
+		border: solid 0px red;
+		width: 22%;
+	}
+	
+	div#container > div#header > div:nth-child(2) {
+	    border: solid 0px blue;
+	    width: 71%;
+	    margin: 0 0 0 auto;
+	}
+	
+	div#container > div#header > div:nth-child(1) table#loginTbl {
+		border: solid 0px orange;
+		width: 100%;
+	}
+	
+	div#container > div#header > div:nth-child(1) table#loginTbl td { 
+		border: solid 0px orange;
+	}
+	
+	div#container > div#header > div:nth-child(1) table#loginTbl > tbody > tr { 
+    	line-height: 40px; 
+    }
+    
+    div#container > div#header > div:nth-child(1) table#loginTbl > tbody > tr:nth-child(3) { 
+    	line-height: 50px; 
+    }
+	
+	div#container > div#header > div:nth-child(1) table#loginTbl > tbody > tr:nth-child(1) > td:nth-child(1),
+	div#container > div#header > div:nth-child(1) table#loginTbl > tbody > tr:nth-child(2) > td:nth-child(1) { 
+		padding-left: 0;
+		font-size: 13pt;
+	}
+	
+	input[id="userid"] , 
+	input[id="passwd"] {
+    	height: 27px; 
+    	width: 100%;
+    }
+    
+    input[type="submit"],
+    input[type="reset"] {
+    	width: 30%;
+    	height: 30px;
+    	font-weight: bold;
+    }
+    
+    input[type="submit"] {
+    	margin-right: 5%; 
+    }
+	
+	div#container > div#header > div:nth-child(2) > img {
+	    width: 200px;
+	    border: solid 0px red;
+	}
+	
+	
+	div#container > div#content {
+		border: solid 0px green;  
+	    display: flex;
+		height: 600px;
+		margin: 1.5% 0 2% 0;  
+	}
+	
+	div#container > div#content > div:nth-child(1) {
+		border: solid 0px red;
+		width: 25%;
+		background-color: #999;
+		padding-top: 1.5%;
+	}
+	
+	div#container > div#content > div:nth-child(2) {
+	    border: solid 0px blue;
+	    width: 68%;
+	    margin: 0 0 0 auto;
+	    padding-top: 1.5%;
+	    background-color: #333;
+		color: #ffffe6;
+		max-height: 600px;
+		overflow: auto;
+	}
+	
+	div#container > div#content > div:nth-child(1) > ul {
+		border: solid 0px black;
+		list-style-type: none;
+		margin: 0;
+		padding: 20px 0 0 40px;
+	}
+		
+    div#container > div#content > div:nth-child(1) > ul > li { 
+    	border: solid 0px red;
+    	line-height: 260%;
+    	margin: 0 0 10% 0;
+    	padding: 0 0 0 20%;
+    }
+    
+    div#container > div#content > div:nth-child(1) > ul > li > a { 
+        text-decoration: none;
+        color: white;
+        border: solid 1px white;
+        display: inline-block;
+        width: 30%; 
+        text-align: center;
+        font-size: 16pt;
+    	font-weight: bold;
+    	border-radius: 50%; 
+    }
+    
+    div#container > div#content > div:nth-child(1) > ul > li > a:hover {
+    	color: #999;
+    	background-color: white;
+    }
+	
+	div#container > div#content > div:nth-child(2) > div {
+	    border: solid 0px white;
+	    padding: 0 0 2% 2%;
+	}
+	
+	div#container > div#bottom {
+		background-color: #ccc;
+    	text-align: center;
+    	padding: 3% 0;
+    	font-size: 16pt;
+	}
+	
+    	
+		
+	
+	
